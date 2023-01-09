@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Palette */
+    --darkblue: #192965;
+    --ligthBlue: #BBCFFF;
+    --lightGreen: #00C040;
+    --lightGray: #F0EFEF;
+}
+
+.seccion-names{
+    text-align: center;
+    background-color: var(--lightGreen);
+    height: 50px;
+}
+
+input[type="text"],
+input[type="mail"],
+select{
+    max-width: 300px;
+    margin: auto;
+    width: 70vw;
+    border: 1px solid black;
+    background: white;
+    padding: 2px;
+    color: black;
+}
+
+input[type="submit"],
+select{
+    max-width: 150px;
+    margin: auto;
+    width: 70vw;
+    border: 1px solid black;
+    background: white;
+    padding: 2px;
+    color: black;
+}
+
+textarea{
+    max-width: 600px;
+    width: 80vw;
+    margin: auto;
+}
+
+
+/******** ABOUT ME ********/
+
+.header {
+    background-color: var(--darkblue);
+    display: flex; /*Posiciona los dos div uno al lado del otro*/
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100vw;
+    position: fixed;
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+header .logo img {
+    height: 100px;
+    width: auto;
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.header .nav-links a:hover{
+    color: var(--lightGreen);
+}
+
+/******** ABOUT ME ********/
+
+#about-me{
+    height: 800px;
+    width: 100%;
+    display: flex; /*Posiciona los dos div uno al lado del otro*/
+    align-items: center; /*Centrar por arriba y por abajo*/
+    background: var(--ligthBlue);
+}
+
+.about-me-left{
+    
+    text-align: center;
+    padding: 10px;
+    width: 50%;
+}
+
+.about-me-left button a{
+    text-decoration: none;
+    color: var(--lightGreen)
+}
+
+.about-me-right{
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+}
+
+#about-me .dani-image{
+    height: auto;
+    width: 300px;
+    border-radius: 777px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#about-me h1{
+    margin-top: 20px;
+}
+
+#about-me p{
+    text-align: justify;
+    margin-top: 20px;
+}
+#about-me button{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#about-me .web-image{
+    width: 500px;
+    height: auto;
+    padding: 10px;
+}
+
+/******** PROJECTS ********/
+
+#projects{
+    height: 520px;
+    width: 100%;
+    background-color: var(--lightGray);
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.item-projects{
+    width: 50%;
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+/******** TESTIMONYS ********/
+
+#testimonys{
+    height: auto;
+    width: 100%;
+    background-color: var(--ligthBlue);
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+.item-testimonys{
+    width: 100%;
+    text-align: center;
+}   
+
+/******** BLOG ********/
+
+/******** CONTACT ********/
+
+form{
+    max-width: 900px;
+    margin: auto;
+    width: 90vw;
+    height: 400px;
+    display: flex;
+    flex-flow: column;
+    background-color: var(--lightGray);
+    padding: 2rem;
+    border-radius: 0.3rem;
+    text-align: center;
+}
+
+form input, textarea{
+    margin-bottom: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+
+form textarea{
+    height: 10rem;
+}
+
+
+
+
+
+
+
+
+
+
+/******** FOOTER ********/
+
+footer{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+/********** @media 900px**********/
+
+@media (max-width:1200px){
+
+#about-me {
+    height: auto;
+    }
+#projects{
+    height: auto;
+}
+}
+
+/********** @media 400px**********/
+
+@media (max-width:400px){
+    
+    header .logo img{
+        scale: 1.5;
+    }
+
+/******** ABOUT ME ********/
+
+
+#about-me {
+    padding-top: 150px;
+    height: auto;
+    flex-direction: column;
+    }
+
+.about-me-left{
+    
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+    }
+    
+.about-me-right{
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+#about-me .web-image{
+    width: 390px;
+    height: auto;
+    }
+
+.item-projects{
+    width: 100%;
+    }
+
+form{
+        width: 100vw;
+}
+}
+
+
+
+
+
+
+
+
+
+
+

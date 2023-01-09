@@ -1,0 +1,80 @@
+{
+    "database":{
+        "basics":{
+            "name": "Pedro Perez",
+            "age": 30,
+            "image": "",
+            "direction": "Barcelona",
+            "phone": "34 650 50 50 50",
+            "url": "http://www.pedroperez.com",
+            "email": "pedroperez@gmail.com"
+          },
+          "skill":{
+            "name": "Javascript",
+            "level": "Advanced",
+            "years": 1
+          },
+          "studies":{
+            "title": "Fullstack developer",
+            "institute": "Factoria F5",
+            "years": 1
+          },
+          "work experience":{
+            "name": "Expresa X",
+            "rols": "Developer full stack",
+            "years": 1
+          },
+          "projects":[
+              {
+                  "name": "Mi primer hola mundo",
+                  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                  "url": "http://www.miprimerholamundo.com",
+                  "language": "html,ccs,javascript,typescript",
+                  "githubUrl": "https://github.com/miprimerholamundo",
+                  "image": ""
+              },
+              {
+                "name": "Mistery Random Travel",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                "url": "http://www.misteryrandomtravel.com",
+                "language": "html,ccs,javascript,typescript",
+                "githubUrl": "https://github.com/misteryrandomtravel",
+                "image": ""
+              },
+              {
+                  "name": "Yum-Yum",
+                  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                  "url": "http://www.yumyum.com",
+                  "language": "html,ccs,javascript,typescript",
+                  "githubUrl": "https://github.com/yumyum",
+                  "image": ""
+              },
+              {
+                  "name": "Space-Jump",
+                  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                  "url": "http://www.spacejump.com",
+                  "language": "html,ccs,javascript,typescript",
+                  "githubUrl": "https://github.com/spacejump",
+                  "image": ""
+              },
+              {
+                  "name": "Frankenwheel of Doom",
+                  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                  "url": "http://www.frankenwheelofdoom.com",
+                  "language": "html,ccs,javascript,typescript",
+                  "githubUrl": "https://github.com/frankenwheelofdoom",
+                  "image": ""
+              },
+              {
+                  "name": "Api-Rest",
+                  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                  "url": "http://www.apirest.com",
+                  "language": "html,ccs,javascript,typescript",
+                  "githubUrl": "https://github.com/apirest",
+                  "image": ""
+              }
+          ]
+    }
+    }
+  
+  
