@@ -1,295 +1,469 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+
+/* GENERAL */
+
+*{
+    text-decoration: none; /*Ningun texto tenga decoracion*/
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 :root {
     /* Color Palette */
-    --darkblue: #192965;
-    --ligthBlue: #BBCFFF;
-    --lightGreen: #00C040;
-    --lightGray: #F0EFEF;
+    --black: #000000;
+    --yellow: #F0A500;
+    --gray: #334756;
+    --blue: #082032;
+    
 }
 
-.seccion-names{
-    text-align: center;
-    background-color: var(--lightGreen);
-    height: 50px;
-}
-
-input[type="text"],
-input[type="mail"],
-select{
-    max-width: 300px;
-    margin: auto;
-    width: 70vw;
-    border: 1px solid black;
+.titles {
     background: white;
-    padding: 2px;
-    color: black;
+    color: var(--black);
 }
-
-input[type="submit"],
-select{
-    max-width: 150px;
-    margin: auto;
-    width: 70vw;
-    border: 1px solid black;
-    background: white;
-    padding: 2px;
-    color: black;
-}
-
-textarea{
-    max-width: 600px;
-    width: 80vw;
-    margin: auto;
+.titles h2{
+    padding: 15px;
 }
 
 #container{
     width: 100%; /*Anchura en concreto*/
-    height: auto;
 }
 
-/******** ABOUT ME ********/
+/* HEADER */
 
-.header {
-    background-color: var(--darkblue);
-    display: flex; /*Posiciona los dos div uno al lado del otro*/
-    justify-content: space-between;
-    align-items: center;
-    height: auto;
+#header{
+    background: var(--black);
+    display: flex; /*Pone la caja de logo y menu una al lado de la otra*/
+    flex-direction: column; /*Se comporta como fila*/
+    align-items: center; /*Centra verticalmente*/
     width: 100%;
-    position: fixed;
-}
-
-.header .logo {
-    cursor: pointer;
-}
-
-header .logo img {
-    height: 100px;
-    width: auto;
-}
-
-.header .nav-links{
-    list-style: none;
-}
-
-.header .nav-links li{
-    display: inline-block;
-    padding: 0 20px;
-}
-
-.header .nav-links a{
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
-}
-
-.header .nav-links a:hover{
-    color: var(--lightGreen);
-}
-
-/******** ABOUT ME ********/
-
-#about-me{
-    height: auto;
-    width: 100%;
-    display: flex; /*Posiciona los dos div uno al lado del otro*/
-    align-items: center; /*Centrar por arriba y por abajo*/
-    padding-top: 130px;
-    background: linear-gradient(to right, #FFFFFF, #81d4fa);
-}
-
-.about-me-left{
-    
-    text-align: center;
-    width: 40%;
-    height: auto;
-}
-
-.about-me-left button a{
-    text-decoration: none;
-    color: var(--lightGreen)
-}
-
-.about-me-right{
-    text-align: center;
-    width: 40%;
-    height: auto;
-}
-
-#about-me .dani-image{
-    height: auto;
-    width: 200px;
-    border-radius: 777px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-#about-me h1{
-    margin-top: 20px;
-}
-
-#about-me p{
-    text-align: justify;
-    margin-top: 20px;
-}
-#about-me button{
-    width: 100px;
-    height: 40px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-#about-me .web-image{
-    width: 650px;
-    height: auto;
-    padding: 10px;
-}
-
-/******** PROJECTS ********/
-
-#projects{
-    height: 520px;
-    width: 100%;
-    background-color: var(--lightGray);
-    color: black;
-    display: flex;
-    flex-wrap: wrap;
-    
-}
-.item-projects{
-    width: 50%;
-    text-align: center;
-    border: 1px solid black;
-
-}
-
-/******** TESTIMONYS ********/
-
-#testimonys{
-    height: auto;
-    width: 100%;
-    background-color: var(--ligthBlue);
-    color: black;
-    display: flex;
-    flex-direction: column;
-}
-.item-testimonys{
-    width: 100%;
-    text-align: center;
 }   
 
-/******** BLOG ********/
+.logo{
+   background: var(--black);
+}
 
-/******** CONTACT ********/
+.logo img{
+    width: 80px;
+    height: auto;
+    padding: 5px;
+}
 
-form{
-    max-width: 900px;
-    margin: auto;
-    width: 90vw;
-    height: 400px;
-    display: flex;
-    flex-flow: column;
-    background-color: var(--lightGray);
-    padding: 2rem;
-    border-radius: 0.3rem;
+.menu{
+    width: 100%;
+  
+}
+
+.menu ul{
+    background: var(--yellow);
+    height: 100%; /*Ocupe toda la altura*/
+    display: flex; /*Poner los elementos que estan dentro de ul uno al lado del otro*/
+    flex-direction: column; /*Ponerlos en fila*/
+    padding: 10px;
+    align-items: flex-start; /*Se alinien al centro*/
+    justify-content: space-between; /*Espacio entre elementos pero los elementos de las esquinas se pegan al borde*/
+    list-style: none; /*Quitar estilos de la lista el punto y el subrayado*/
+}
+
+#header .menu a{
+    color : white;
+    transition: all 200ms;
+    font-weight: bold;
+}
+
+#header .menu a:hover{
+    color: black;
+}
+
+/* SOBRE MI */
+
+#about-me{
+    display: flex; /*Pone la caja de logo y menu una al lado de la otra*/
+    flex-direction: column; /*Se comporta como fila*/
+    align-items: center; /*Centra verticalmente*/
+    width: 100%;
+    padding-top: 20px;
+    justify-content: center;
+    background: var(--blue);
+} 
+
+#about-me > .about-me-left{
     text-align: center;
+    align-items: center; /*Centra verticalmente*/
 }
 
-form input, textarea{
-    margin-bottom: 1.2rem;
-    padding: 0.5rem;
-    border-radius: 0.3rem;
+h1{
+    color:white;
 }
 
-form textarea{
-    height: 10rem;
+.dani-image{
+    padding-top: 10px;
+    width: 250px;
+    height: auto;
+    border-radius: 333px;
 }
 
+.about-me-left p{
+    padding: 15px;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    margin: 30px;
+    color: white;
+    word-spacing: 10px;
+}
 
+button{
+    width: 120px;
+    height: 40px;
+    background: var(--yellow);
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 4px;
+}
 
+button a{
+    color: white;
+    font-weight: bold;
+}
 
+.about-me-right{
+    margin: 20px;
+}
 
+.web-image{
+    width: 400px;
+    height: auto;
+}
 
+/* PROJECTOS */
 
+#projects{
+    display: flex; /*Pone la caja de logo y menu una al lado de la otra*/
+    flex-direction: column; /*Se comporta como fila*/
+    align-items: center; /*Centra verticalmente*/
+    width: 100%;
+    padding-top: 20px;
+    justify-content: center;
+    background: var(--gray);
+} 
 
+.project{
+    border: 1px solid black;
+    margin: 30px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    align-items: center; /*Centra verticalmente*/
+}
 
+.image-project img{
+    width: 90%;
+    min-height: 250px;
 
-/******** FOOTER ********/
+}
+/* HABILIDADES */
+
+.skills{
+    background-color: var(--blue);
+    color: #fff;
+    padding: 50px 50px; 
+}
+
+.skills .contenido-section{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skills .fila{
+    display: flex;
+    flex-direction: column;
+}
+
+.skills .fila .col{
+    width: 100%;
+    padding: 0 20px;
+}
+.skills .fila .col h3{
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+.skills .skill > span{
+    font-weight: bold; 
+    display: block;
+    margin-bottom: 10px;
+}
+.skills .skill .barra-skill{
+    height: 8px;
+    width: 80%;
+    background-color: var(--black);
+    position: relative;
+    margin-bottom: 30px;
+}
+.skills .skill .progreso{
+    background-color: var(--yellow);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+.skills .skill .barra-skill span{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: var(--yellow);
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+/* % HABILIDADES TECNICAS */
+
+/*HTML & CSS*/
+.skills .skill .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;   
+}
+@keyframes htmlcss{
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+/*JavaScript*/
+.skills .skill .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;   
+}
+@keyframes javascript{
+    0%{width: 0%;}
+    100%{width: 74%;}
+}
+/*TypeScript*/
+.skills .skill .typescript{
+    width: 0%;
+    animation: 2s typescript forwards;   
+}
+@keyframes typescript{
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+/*Reac*/
+.skills .skill .reac{
+    width: 0%;
+    animation: 2s reac forwards;   
+}
+@keyframes reac{
+    0%{width: 0%;}
+    100%{width: 82%;}
+}
+/*Nest.js*/
+.skills .skill .nestjs{
+    width: 0%;
+    animation: 2s nestjs forwards;   
+}
+@keyframes nestjs{
+    0%{width: 0%;}
+    100%{width: 71%;}
+}
+
+/* % HABILIDADES PERSONALES */
+
+/*Comunicacion*/
+.skills .skill .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;   
+}
+@keyframes comunicacion{
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+/*Trabajo en Equipo*/
+.skills .skill .trabajo-en-equipo{
+    width: 0%;
+    animation: 2s trabado-en-equipo forwards;   
+}
+@keyframes trabado-en-equipo{
+    0%{width: 0%;}
+    100%{width: 95%;}
+}
+/*Creatividad*/
+.skills .skill .creatividad{
+    width: 0%;
+    animation: 2s creatividad forwards;   
+}
+@keyframes creatividad{
+    0%{width: 0%;}
+    100%{width: 88%;}
+}
+/*Dedicacion*/
+.skills .skill .dedicacion{
+    width: 0%;
+    animation: 2s dedicacion forwards;   
+}
+@keyframes dedicacion{
+    0%{width: 0%;}
+    100%{width: 92%;}
+}
+/*Responsabilidad*/
+.skills .skill .responsabilidad{
+    width: 0%;
+    animation: 2s responsabilidad forwards;   
+}
+@keyframes responsabilidad{
+    0%{width: 0%;}
+    100%{width: 98%;}
+}
+
+/* CONTACTO */
+
+#contact{
+    width: 100%;  
+    height: auto;
+    background: var(--gray);   
+}
+.contact-image{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+ }
+.contact-image img{
+   width: 250px;
+   margin: 0 auto;
+   padding-top: 30px;
+}
+
+.redes {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .buttons {
+    min-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+  
+  .buttons a {
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: var(--yellow);
+    color: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+  }
+  
+  .buttons a:hover {
+    transform: scale(1.2);
+  }
+
+  .contact-me{
+    min-width: 100px;
+    min-height: 100px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-me a {
+    text-decoration: none;
+    padding: 5px;
+    font-size: 28px;
+    width: 160px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: var(--yellow);
+    color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    
+  }
+  
+
+/* FOOTER */
 
 footer{
-    height: 50px;
+    height: 30px;
     width: 100%;
     text-align: center;
+    background: var(--black);
+    color: white;
 }
 
-/********** @media 900px**********/
-
-@media (max-width:1200px){
-
-#about-me {
-    height: auto;
-    }
-#projects{
-    height: auto;
-}
-}
-
-/********** @media 400px**********/
-
-@media (max-width:400px){
-    
-    header .logo img{
-        scale: 1.5;
-    }
-
-/******** ABOUT ME ********/
 
 
-#about-me {
-    padding-top: 150px;
-    height: auto;
-    flex-direction: column;
-    }
+/* M E D I A Q U E R Y */
 
-.about-me-left{
-    
+@media (min-width: 768px){
+    #header{
+        flex-direction: row;
         text-align: center;
-        padding: 10px;
-        width: 100%;
     }
+    .menu > ul {
+        background: var(--black);
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    #header .menu a{
+        color: white;
+    }
+    #header .menu a:hover{
+        color: var(--yellow);
+    }
+    #about-me{
     
-.about-me-right{
-        text-align: center;
-        width: 100%;
-        padding: 10px;
-    }
-
-#about-me .web-image{
-    width: 390px;
-    height: auto;
-    }
-
-.item-projects{
+    display: flex; /*Pone la caja de logo y menu una al lado de la otra*/
+    flex-direction: row; /*Se comporta como fila*/
+    align-items: center; /*Centra verticalmente*/
     width: 100%;
+    padding-top: 20px;
+    justify-content: center;
+    background: var(--blue);
+    } 
+    #projects{
+    
+    display: flex; /*Pone la caja de logo y menu una al lado de la otra*/
+    flex-direction: row; /*Se comporta como fila*/
+    align-content:space-between;
+    width: 100%;
+    padding-top: 20px;
+    justify-content: center;
+    background: var(--gray)
+    } 
+    .project{
+    border: 1px solid black;
+    margin: 30px;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    align-items: center; /*Centra verticalmente*/
     }
-
-form{
-        width: 100vw;
+    .image-project img{
+    width: 250px;
+    height: auto;
+    }
+    /*Habilidades*/
+    .skills .fila{
+        display: flex;
+        flex-direction: row;
+    }
+    .skills .fila .col{
+        width: 50%;
+        padding: 0 20px;
+    }
 }
-}
-
-
-
-
-
-
-
-
-
-
 
